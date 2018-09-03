@@ -1,15 +1,13 @@
-apply plugin: 'com.android.application'
-
+apply plugin: 'com.android.library'
 
 android {
     compileSdkVersion 28
 
     defaultConfig {
-        applicationId "com.timehop.stickyheadersrecyclerview.sample"
         minSdkVersion 14
         targetSdkVersion 28
         versionCode 1
-        versionName "1.0.0"
+        versionName project.property("bintray.libraryVersion")
     }
     compileOptions {
         sourceCompatibility JavaVersion.VERSION_1_8
@@ -18,6 +16,7 @@ android {
 }
 
 dependencies {
-    implementation project(':sticky-headers-recyclerview')
-    implementation "androidx.appcompat:appcompat:+"
+    api "androidx.recyclerview:recyclerview:+"
 }
+
+apply from: 'https://raw.githubusercontent.com/bourdakos1/jCenter-Upload/master/upload.gradle'

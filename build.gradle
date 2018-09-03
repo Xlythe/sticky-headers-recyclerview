@@ -3,9 +3,13 @@
 buildscript {
     repositories {
         jcenter()
+        mavenCentral()
+        google()
     }
     dependencies {
-        classpath 'com.android.tools.build:gradle:1.5.0'
+        classpath 'com.android.tools.build:gradle:3.3.0-alpha08'
+        classpath 'com.jfrog.bintray.gradle:gradle-bintray-plugin:1.7.3'
+        classpath 'com.github.dcendents:android-maven-gradle-plugin:1.4.1'
 
         // NOTE: Do not place your application dependencies here; they belong
         // in the individual module build.gradle files
@@ -15,15 +19,7 @@ buildscript {
 allprojects {
     repositories {
         jcenter()
+        mavenCentral()
+        google()
     }
-}
-
-ext {
-    compileSdkVersion = 23
-    buildToolsVersion = '23.0.2'
-    supportLibsVersion = '23.1.1'
-    targetSdkVersion = 22
-    minSdkVersion = 11
-    versionCode = 13
-    versionName = "0.4.3"
 }

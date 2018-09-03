@@ -1,11 +1,10 @@
 package com.timehop.stickyheadersrecyclerview.sample;
 
-import android.support.v7.widget.RecyclerView;
-
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collection;
 
+import androidx.recyclerview.widget.RecyclerView;
 
 /**
  * Adapter holding a list of animal names of type String. Note that each item must be unique.
